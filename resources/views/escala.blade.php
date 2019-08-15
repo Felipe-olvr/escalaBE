@@ -15,6 +15,7 @@
 	<th>E-mail</th>
 	<th>Empresa</th>
 	<th>Escalas</th>
+	<th>Status</th>
 </tr>
 
 @foreach($escala as $key => $data)
@@ -23,6 +24,7 @@
 	<td>{{$data->email}}</td>
 	<td>{{$data->company}}</td>
 	<td>{{$data->escalas}}</td>
+	<td>{{$data->status}}</td>
 </tr>
 @endforeach
 

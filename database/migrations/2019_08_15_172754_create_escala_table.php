@@ -22,7 +22,7 @@ class CreateEscalaTable extends Migration
             $table->string('email');
             $table->string('company');
             $table->string('escalas');
-
+            $table->string('status');
         });
     }
 
