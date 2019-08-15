@@ -1,5 +1,5 @@
 <!-- resources/views/escala.blade.php -->
-
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Escala de usuários</title>

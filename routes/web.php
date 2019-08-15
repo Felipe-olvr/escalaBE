@@ -19,3 +19,13 @@ $router->get('/', function () use ($router) {
     $escala = Escala::query()->get();
     return view('escala', ['escala' => $escala]);
 });
+
+// 'prefix' => 'api/v1','namespace' => 'App\Http\Controllers'
+
+// It'll show the json object on http://<localhost>/escala
+$router->group([
+	'prefix' => '/escala'
+	], function() use ($router){
+		$router->get('/', 'EscalaController@index');
+	}
+);
