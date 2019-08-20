@@ -22,10 +22,14 @@ $router->get('/', function () use ($router) {
 
 // 'prefix' => 'api/v1','namespace' => 'App\Http\Controllers'
 
-// It'll show the json object on http://<localhost>/escala
+// json object will be on http://<localhost>/escala
 $router->group([
 	'prefix' => '/escala'
 	], function() use ($router){
 		$router->get('/', 'EscalaController@index');
 	}
 );
+
+Route::get('/admin/user_registration', 'EscalaController@user_registration');
+Route::post('/register_action', 'EscalaController@store');
+

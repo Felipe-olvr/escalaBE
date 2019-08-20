@@ -30,5 +30,7 @@
 
 </table>
 
+<a href="http://homestead.local/admin/user_registration">Cadastrar usuários</a>
+
 </body>
 </html>

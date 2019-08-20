@@ -20,4 +20,22 @@ class EscalaController extends Controller
     	$escala = Escala::all();
     	return response()->json($escala);
     }
+
+    public function user_registration()
+    {
+    	return view('admin.user_registration');
+    }
+
+    public function store(Request $request){
+    	$escala = new Escala;
+    	$escala->user = $request->user;
+    	$escala->email = $request->email;
+    	$escala->company = $request->company;
+    	$escala->escalas = $request->escalas;
+    	$escala->status = $request->status; 
+
+    	$escala->save();
+    	//dd('show something');
+    	return redirect('/admin/user_registration');
+    }
 }
