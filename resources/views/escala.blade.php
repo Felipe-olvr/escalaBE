@@ -25,12 +25,18 @@
 	<td>{{$data->company}}</td>
 	<td>{{$data->escalas}}</td>
 	<td>{{$data->status}}</td>
+	<td>
+		<form method="POST" action='/delete_action/{{$data->id}}/delete' onsubmit="return alert('Usuário Deletado!');">
+			<input type="submit" value="Excluir" />
+		</form>
+	</td>
 </tr>
 @endforeach
 
 </table>
-
-<a href="http://homestead.local/admin/user_registration">Cadastrar usuários</a>
-
+<center>
+<h2>Ir para ...</h2>
+<a href="http://homestead.local/admin/user_registration">Cadastrar Usuários</a>
+</center>
 </body>
 </html>

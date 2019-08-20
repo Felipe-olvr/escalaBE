@@ -32,4 +32,5 @@ $router->group([
 
 Route::get('/admin/user_registration', 'EscalaController@user_registration');
 Route::post('/register_action', 'EscalaController@store');
+Route::post('/delete_action/{id}/delete', 'EscalaController@delete');
 

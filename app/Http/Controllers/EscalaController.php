@@ -26,7 +26,8 @@ class EscalaController extends Controller
     	return view('admin.user_registration');
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
     	$escala = new Escala;
     	$escala->user = $request->user;
     	$escala->email = $request->email;
@@ -38,4 +39,13 @@ class EscalaController extends Controller
     	//dd('show something');
     	return redirect('/admin/user_registration');
     }
+
+    public function delete($id)
+    {
+    	$escala = Escala::find($id);
+    	$escala->delete();
+
+    	return redirect('/');
+    }
+
 }
